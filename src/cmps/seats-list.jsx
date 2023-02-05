@@ -1,5 +1,8 @@
+//? Libraries
 import React, { useState, useEffect } from 'react'
+//? Services
 import { theatreService } from '../services/theatre/theatre.service.local'
+//? Components
 import { SeatDetails } from './seat-details'
 
 export function SeatsList({ seats, selectedTheatre }) {
@@ -17,6 +20,7 @@ export function SeatsList({ seats, selectedTheatre }) {
     return () => clearTimeout(timeout)
   }, [showPopup])
 
+  //? Private Functions
   const onSeatClick = (seat) => {
     setSelectedSeat(seat)
     setShowPopup(true)
@@ -44,7 +48,11 @@ export function SeatsList({ seats, selectedTheatre }) {
           <article
             key={seat.id}
             className={`theater-details-seats-list-seat ${
-              seat.reserved ? 'reserved' : ''
+              seat.reserved
+                ? 'reserved'
+                : seat.id === selectedSeat?.id
+                ? 'selected'
+                : ''
             }`}
             onClick={() => !seat.reserved && onSeatClick(seat)}
           >
