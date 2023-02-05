@@ -11,7 +11,9 @@
   &-seats-list {
     display: flex;
     flex-wrap: wrap;
+    width: calc(100vw - 100px);
     &-seat {
+      border-radius: 8px;
       cursor: pointer;
       width: 30px;
       height: 30px;

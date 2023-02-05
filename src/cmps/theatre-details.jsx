@@ -25,10 +25,11 @@ export function TheatreDetails() {
   return (
     <section>
       {theatre && (
-        <article>
+        <>
           <h1>{theatre.title}</h1>
+          <article className="theater-details-screen">Screen</article>
           <SeatsList seats={theatre.seats} selectedTheatre={theatre} />
-        </article>
+        </>
       )}
     </section>
   )
