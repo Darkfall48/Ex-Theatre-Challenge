@@ -1,0 +1,45 @@
+.theater-details {
+  display: flex;
+  flex-direction: column;
+  &-screen {
+    place-self: center;
+    text-align: center;
+    background-color: firebrick;
+    width: 100px;
+    height: 32px;
+  }
+  &-seats-list {
+    display: flex;
+    flex-wrap: wrap;
+    &-seat {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      text-align: center;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      &.clear {
+        clear: both;
+      }
+      &.selected {
+        background-color: darkRed;
+      }
+      &.reserved {
+        background-color: darkgrey;
+      }
+    }
+  }
+
+  &-popup {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
