@@ -49,17 +49,18 @@ export function TheatreIndex() {
   // }, [selectedTheatre])
 
   return (
-    <section className="theatre-index-section">
-      <h1> Theatre</h1>
-      <article className="theatre-index-section-article">
+    <section className="theatres-index">
+      <h1 className="theatres-index-title"> Theatres</h1>
+      <article className="theatres-index-theatre">
         {theatres &&
           theatres.map((theatre) => (
-            <div
+            <h2
+              className="theatres-index-theatre-title"
               key={theatre._id}
               onClick={() => navigate(`/theatre/${theatre._id}`)}
             >
               {theatre.title}
-            </div>
+            </h2>
           ))}
       </article>
     </section>

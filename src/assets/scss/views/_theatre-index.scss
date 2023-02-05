@@ -1,2 +1,21 @@
-.theatre-index {
+.theatres-index {
+  text-align: center;
+  &-title {
+    @include h2;
+    color: $primary-color-3;
+  }
+  &-theatre {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    gap: 8px;
+    &-title {
+      border: 1px solid $primary-color-2;
+      border-radius: 4px;
+      height: min-content;
+      padding: 8px;
+      cursor: pointer;
+      color: $primary-color-2;
+    }
+  }
 }
