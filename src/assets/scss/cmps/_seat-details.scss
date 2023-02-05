@@ -1,0 +1,20 @@
+.seat-details {
+  position: fixed;
+  background-color: $primary-color-2;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  height: fit-content;
+  padding: 18px;
+  border-radius: 4px;
+  place-content: center;
+  text-align: center;
+  gap: 8px;
+  &-price {
+    @include h3;
+  }
+  &-book-btn {
+  }
+  &-close-btn {
+  }
+}

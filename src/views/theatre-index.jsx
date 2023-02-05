@@ -21,33 +21,6 @@ export function TheatreIndex() {
     }
   }
 
-  // async function onLoadTheatres() {
-  //   try {
-  //     await onLoadTheatres()
-  //     console.log('loaded theatres')
-  //   } catch (err) {
-  //     console.log('Cannot load theatres')
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const theatres = await theatreService.query()
-  //     setTheatres(theatres)
-  //   }
-  //   fetchData()
-  // }, [])
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const theatre = await theatreService.get(selectedTheatre._id)
-  //     setSelectedTheatre(theatre)
-  //   }
-  //   if (selectedTheatre) {
-  //     fetchData()
-  //   }
-  // }, [selectedTheatre])
-
   return (
     <section className="theatres-index">
       <h1 className="theatres-index-title"> Theatres</h1>

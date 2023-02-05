@@ -8,13 +8,11 @@ import {
 import thunk from 'redux-thunk'
 //? Reducers
 import { theatreReducer } from './reducers/theatre.reducer'
-import { userReducer } from './reducers/user.reducer'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const rootReducer = combineReducers({
   theatreModule: theatreReducer,
-  userModule: userReducer,
 })
 
 export const store = createStore(

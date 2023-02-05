@@ -54,10 +54,15 @@ export function SeatsList({ seats, selectedTheatre }) {
                 ? 'selected'
                 : ''
             }`}
+            title={`${
+              seat.reserved
+                ? 'Seat Reserved/Booked'
+                : seat.id === selectedSeat?.id
+                ? 'Seat Selected'
+                : 'Seat Available'
+            }`}
             onClick={() => !seat.reserved && onSeatClick(seat)}
-          >
-            {seat.price}
-          </article>
+          ></article>
         ))}
 
       {showPopup && (

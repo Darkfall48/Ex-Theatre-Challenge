@@ -3,7 +3,7 @@
 export function HomePage() {
   return (
     <section className="home-page">
-      <h1>Ex - React Classes</h1>
+      <h1>Ex - Theatre Challenge</h1>
     </section>
   )
 }

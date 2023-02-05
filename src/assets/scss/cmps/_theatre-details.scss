@@ -5,8 +5,9 @@
     place-self: center;
     text-align: center;
     background-color: firebrick;
-    width: 100px;
+    width: 500px;
     height: 32px;
+    color: $primary-color-3;
   }
   &-seats-list {
     display: flex;
@@ -16,11 +17,12 @@
       border-radius: 8px;
       cursor: pointer;
       width: 30px;
-      height: 30px;
+      height: 35px;
       border: 1px solid black;
       text-align: center;
       margin-right: 10px;
       margin-bottom: 10px;
+      background-color: darkgrey;
 
       &.clear {
         clear: both;
@@ -29,7 +31,8 @@
         background-color: darkRed;
       }
       &.reserved {
-        background-color: darkgrey;
+        cursor: not-allowed;
+        background-color: rgb(41, 38, 38);
       }
     }
   }
