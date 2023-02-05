@@ -1,0 +1,39 @@
+// Colors
+$clr1: #e01e5a;
+$clr2: #293241;
+$clr3: #5c3fc5;
+$clr4: #696969;
+$clr5: #e6e9ec;
+
+$navHeight: 65px;
+
+//* COLORS
+//background
+$main-bg-color: #014e56;
+// Primary
+$primary-color-1: #014e56;
+$primary-color-2: #f67e7e;
+$primary-color-3: #ffffff;
+// Secondary
+$secondary-color-1: #79c8c7;
+$secondary-color-2: #2c6269;
+$secondary-color-3: #004047;
+$secondary-color-4: #012f34;
+$secondary-color-5: #002529;
+$secondary-color-6: rgb(37, 22, 109);
+$secondary-color-7: rgb(149, 34, 169);
+
+// //* BORDERS
+// $border-img-1: 2px solid #c4fffe;
+
+//* LAYOUT
+$layoutPadding: 20px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 600px;
+$break-normal: 900px;
+$break-wide: 1100px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;
