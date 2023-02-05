@@ -1,88 +1,35 @@
 //? Libraries
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { theatreService } from '../services/theatre/theatre.service.local'
+import { SeatsList } from './seats-list'
 
-export function TheaterDetails() {
-  const [seats, setSeats] = useState(
-    Array.from({ length: 100 }, (_, i) => ({
-      id: i,
-      price: Math.floor(Math.random() * 100) + 1,
-      reserved: false,
-    }))
-  )
-  const [selectedSeat, setSelectedSeat] = useState(null)
-  const [showPopup, setShowPopup] = useState(false)
-
-  //? Private Functions
-  const onSeatClick = (seat) => {
-    setSelectedSeat(seat)
-    setShowPopup(true)
-  }
-
-  const onSeatBooked = () => {
-    setSeats(
-      seats.map((seat) =>
-        seat.id === selectedSeat.id ? { ...seat, reserved: true } : seat
-      )
-    )
-    setShowPopup(false)
-  }
-
-  const onClosePopup = () => {
-    setShowPopup(false)
-  }
+export function TheatreDetails() {
+  const [theatre, setTheatre] = useState([])
+  const { theatreId } = useParams()
 
   useEffect(() => {
-    theatreService.query()
-  })
+    onloadTheatre()
+  }, [theatreId])
 
-  useEffect(() => {
-    let timeout
-    if (showPopup) {
-      timeout = setTimeout(() => {
-        setShowPopup(false)
-        setSelectedSeat(null)
-      }, 10 * 1000)
+  async function onloadTheatre() {
+    try {
+      const theatre = await theatreService.get(theatreId)
+      console.log('Theatre', theatreId, 'loaded!')
+      setTheatre(theatre)
+    } catch (err) {
+      console.log('Cannot load theatre:', theatreId)
     }
-    return () => clearTimeout(timeout)
-  }, [showPopup])
-
-  //? Private Components
-  function SeatsList() {
-    return (
-      <section className="theater-details-seats-list">
-        {seats.map((seat, index) => (
-          <article
-            className={`theater-details-seats-list-seat ${
-              index % 3 === 0 ? 'clear' : ''
-            } ${seat.reserved ? 'reserved' : ''} ${
-              selectedSeat === seat ? 'selected' : ''
-            }`}
-            key={seat.id}
-            onClick={() => onSeatClick(seat)}
-          >
-            {seat.id + 1}
-          </article>
-        ))}
-      </section>
-    )
-  }
-
-  function SeatPreview() {
-    return (
-      <section className="theater-details-popup">
-        <p>Seat price: {selectedSeat.price}</p>
-        <button onClick={onSeatBooked}>Book</button>
-        <button onClick={onClosePopup}>Close</button>
-      </section>
-    )
   }
 
   return (
-    <section className="theater-details">
-      <article className="theater-details-screen">Screen</article>
-      <SeatsList />
-      {showPopup && <SeatPreview />}
+    <section>
+      {theatre && (
+        <article>
+          <h1>{theatre.title}</h1>
+          <SeatsList seats={theatre.seats} selectedTheatre={theatre} />
+        </article>
+      )}
     </section>
   )
 }

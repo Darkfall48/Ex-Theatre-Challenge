@@ -13,6 +13,7 @@ import { HomePage } from './views/home-page'
 import { AppHeader } from './cmps/app/AppHeader'
 import { AppFooter } from './cmps/app/AppFooter'
 import { TheatreIndex } from './views/theatre-index'
+import { TheatreDetails } from './cmps/theatre-details'
 
 export function RootCmp() {
   const location = useLocation()
@@ -22,6 +23,7 @@ export function RootCmp() {
       <AppHeader />
       <main className="main-container">
         <Routes location={location}>
+          <Route path="/theatre/:theatreId" element={<TheatreDetails />} />
           <Route path="/theatre" element={<TheatreIndex />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
