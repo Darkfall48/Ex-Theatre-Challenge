@@ -1,5 +1,6 @@
 //? Libraries
 import React, { useState, useEffect } from 'react'
+import { theatreService } from '../services/theatre/theatre.service.local'
 
 export function TheaterDetails() {
   const [seats, setSeats] = useState(
@@ -30,6 +31,10 @@ export function TheaterDetails() {
   const onClosePopup = () => {
     setShowPopup(false)
   }
+
+  useEffect(() => {
+    theatreService.query()
+  })
 
   useEffect(() => {
     let timeout
