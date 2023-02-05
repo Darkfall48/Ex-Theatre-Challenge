@@ -12,7 +12,7 @@ import './assets/scss/imports.scss'
 import { HomePage } from './views/home-page'
 import { AppHeader } from './cmps/app/AppHeader'
 import { AppFooter } from './cmps/app/AppFooter'
-import { TheatreIndex } from './views/theatre-index'
+import { TheatreIndex } from './views/theatres-index'
 import { TheatreDetails } from './cmps/theatre-details'
 
 export function RootCmp() {
