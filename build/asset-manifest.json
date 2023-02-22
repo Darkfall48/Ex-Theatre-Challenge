@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Ex-Theatre-Challenge/static/css/main.eb7ac57f.css",
+    "main.js": "/Ex-Theatre-Challenge/static/js/main.d7dd9369.js",
+    "static/js/787.7753118f.chunk.js": "/Ex-Theatre-Challenge/static/js/787.7753118f.chunk.js",
+    "static/media/Livvic-Bold.ttf": "/Ex-Theatre-Challenge/static/media/Livvic-Bold.089af19ac41ce144a96c.ttf",
+    "static/media/Livvic-SemiBold.ttf": "/Ex-Theatre-Challenge/static/media/Livvic-SemiBold.c79c53d29c413ab69adb.ttf",
+    "index.html": "/Ex-Theatre-Challenge/index.html",
+    "main.eb7ac57f.css.map": "/Ex-Theatre-Challenge/static/css/main.eb7ac57f.css.map",
+    "main.d7dd9369.js.map": "/Ex-Theatre-Challenge/static/js/main.d7dd9369.js.map",
+    "787.7753118f.chunk.js.map": "/Ex-Theatre-Challenge/static/js/787.7753118f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb7ac57f.css",
+    "static/js/main.d7dd9369.js"
+  ]
+}

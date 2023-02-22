@@ -40,7 +40,7 @@
     display: block;
     content: '';
     width: 100%;
-    padding-top: calc(($height / $width) * 100%);
+    padding-top: calc((calc($height / $width)) * 100%);
   }
 
   > * {
